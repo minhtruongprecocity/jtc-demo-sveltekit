@@ -7,13 +7,15 @@
 </script>
 
 <Container>
-	<a href="/companies" class="mb-4 py-2 block">&lt; <span class="hover:underline">Back</span></a>
+	<a href="/companies" class="mb-4 py-2 block text-blue-950"
+		>&lt; <span class="hover:underline">Back</span></a
+	>
 
 	<div class="flex gap-4">
 		<div class="w-full">
 			<div class="flex items-center flex-col sm:flex-row">
 				<div class="flex-1 w-full">
-					<div class="text-3xl font-bold">
+					<div class="text-2xl font-bold">
 						{data.company.name}
 					</div>
 					<div>

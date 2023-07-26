@@ -11,7 +11,7 @@
 
 <Container>
 	<div class="flex items-center mb-4 justify-end flex-row">
-		<h1 class="text-3xl font-bold flex-1">Top 10 - Annual Sales</h1>
+		<h1 class="text-2xl font-bold flex-1">Top 10 - Annual Sales</h1>
 		<Toggle
 			class="justify-end hidden sm:flex"
 			checked={viewAsList}

@@ -15,7 +15,7 @@
 		class="object-cover h-48 w-full"
 	/>
 	<div class="p-3">
-		<div class="font-bold text-lg group-hover:underline">{company.name}</div>
+		<div class="font-bold text-lg group-hover:underline text-blue-950">{company.name}</div>
 		<div class="text-sm mb-4">
 			{company.city}, {company.state}
 		</div>
