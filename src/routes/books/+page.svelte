@@ -1,9 +1,7 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { getBooks, getBooksWithUrl } from '$lib/books';
+	import { getBooks, getBooksWithUrl } from '$lib/api/books';
 	import BooksTable from '$lib/components/BooksTable.svelte';
 	import Container from '$lib/components/Container.svelte';
-	import type { BooksResult } from '../../types/Book';
 
 	let booksPromise = getBooks();
 
