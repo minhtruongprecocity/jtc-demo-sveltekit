@@ -11,8 +11,6 @@
 </script>
 
 <Container>
-	<h1 class="text-2xl font-bold mb-4">Project Gutenberg Ebooks</h1>
-
 	{#await booksPromise}
 		<h1>Loading...</h1>
 	{:then books}

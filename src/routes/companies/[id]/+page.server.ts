@@ -6,7 +6,8 @@ export async function entries() {
 		(await cms.items.list({
 			filter: {
 				type: 'company'
-			}
+			},
+			page: { limit: 100 }
 		})) ?? []
 	);
 }
