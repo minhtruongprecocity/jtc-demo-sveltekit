@@ -1,4 +1,4 @@
-import type { Book, BooksResult } from '../types/Book';
+import type { BooksResult } from '../../types/Book';
 
 const BASE_URL = 'https://gutendex.com';
 

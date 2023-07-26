@@ -1,4 +1,4 @@
-import { cms } from '$lib/cms.js';
+import { cms } from '$lib/api/cms.js';
 import { toCompany } from '../../../types/Company.js';
 
 export async function entries() {

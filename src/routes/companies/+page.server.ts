@@ -1,8 +1,7 @@
-import { cms } from '$lib/cms.js';
-import type { PageLoad } from '../$types';
+import { cms } from '$lib/api/cms';
 import { toCompanies } from '../../types/Company';
 
-export const load: PageLoad = async () => {
+export const load = async () => {
 	return {
 		companies: toCompanies(
 			(await cms.items.list({
