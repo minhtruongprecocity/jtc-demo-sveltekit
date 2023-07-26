@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import Container from '$lib/components/Container.svelte';
 	import Currency from '$lib/components/Currency.svelte';
 	import type { PageData } from './$types';
@@ -8,9 +7,7 @@
 </script>
 
 <Container>
-	<button class="mb-4 py-2 rounded" on:click={() => goto('/')}
-		>&lt; <span class="hover:underline">Back</span></button
-	>
+	<a href="/" class="mb-4 py-2 block">&lt; <span class="hover:underline">Back</span></a>
 
 	<div class="flex gap-4">
 		<div class="w-full">
