@@ -1,24 +1,13 @@
 <script lang="ts">
 	import type { Company } from '../../types/Company';
 	import Currency from './Currency.svelte';
-	import { createEventDispatcher } from 'svelte';
-
-	const dispatch = createEventDispatcher();
 
 	export let company: Company;
-	function companyClickHandler() {
-		dispatch('click', {
-			id: company.id
-		});
-	}
 </script>
 
-<div
+<a
+	href={`/company/${company.id}`}
 	class="cursor-pointer border border-gray-50 shadow-sm bg-white hover:bg-gray-50 group"
-	on:click={companyClickHandler}
-	on:keypress={companyClickHandler}
-	role="button"
-	tabindex="0"
 >
 	<img
 		src={`https://picsum.photos/seed/${company.id}/640/480`}
@@ -32,4 +21,4 @@
 		</div>
 		<Currency currency="USD" amount={company.annualSales} />
 	</div>
-</div>
+</a>

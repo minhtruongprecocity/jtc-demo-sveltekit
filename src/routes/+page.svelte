@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import CompanyGrid from '$lib/components/CompanyGrid.svelte';
 	import CompanyList from '$lib/components/CompanyList.svelte';
 	import Container from '$lib/components/Container.svelte';
@@ -8,11 +7,6 @@
 
 	export let data: PageData;
 	let viewAsList = false;
-	const companies = data.companies.sort((a, b) => b.annualSales - a.annualSales).slice(0, 10);
-
-	function companyClickHandler(event: any) {
-		goto(`company/${event.detail.id}`);
-	}
 </script>
 
 <Container>
@@ -29,14 +23,14 @@
 
 	{#if !viewAsList}
 		<div class="grid gap-5 md:grid-cols-3 sm:grid-cols-2">
-			{#each companies as company, i}
-				<CompanyGrid {company} on:click={companyClickHandler} />
+			{#each data.companies as company, i}
+				<CompanyGrid {company} />
 			{/each}
 		</div>
 	{:else if viewAsList}
 		<div class="grid gap-5 grid-cols-1">
-			{#each companies as company, i}
-				<CompanyList {company} on:click={companyClickHandler} />
+			{#each data.companies as company, i}
+				<CompanyList {company} />
 			{/each}
 		</div>
 	{/if}
