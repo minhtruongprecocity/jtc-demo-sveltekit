@@ -6,7 +6,7 @@
 </script>
 
 <a
-	href={`/company/${company.id}`}
+	href={`/companies/${company.id}`}
 	class="cursor-pointer border border-gray-50 shadow-sm bg-white hover:bg-gray-50 group"
 >
 	<img

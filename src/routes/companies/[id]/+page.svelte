@@ -7,7 +7,7 @@
 </script>
 
 <Container>
-	<a href="/" class="mb-4 py-2 block">&lt; <span class="hover:underline">Back</span></a>
+	<a href="/companies" class="mb-4 py-2 block">&lt; <span class="hover:underline">Back</span></a>
 
 	<div class="flex gap-4">
 		<div class="w-full">
