@@ -22,5 +22,5 @@ export function toCompany(obj: any): Company {
 }
 
 export function toCompanies(obj: Array<any>): Array<Company> {
-	return obj.map((c) => toCompany(c));
+	return obj?.map((c) => toCompany(c));
 }
