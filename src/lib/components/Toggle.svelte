@@ -4,7 +4,10 @@
 	export let onLabel: string;
 </script>
 
-<label for="toggle" class="inline-flex items-center p-2 rounded-md cursor-pointer text-sm">
+<label
+	for="toggle"
+	class="inline-flex items-center p-2 rounded-md cursor-pointer text-sm {$$props.class}"
+>
 	<input id="toggle" type="checkbox" class="hidden peer" bind:checked on:click />
 	<span
 		class="px-4 py-1 rounded-l-sm bg-blue-900 peer-checked:bg-gray-300 text-white peer-checked:text-black"
