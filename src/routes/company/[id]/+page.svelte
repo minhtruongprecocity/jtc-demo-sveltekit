@@ -14,15 +14,19 @@
 
 	<div class="flex gap-4">
 		<div class="w-full">
-			<div class="flex items-center">
-				<div class="text-2xl font-bold flex-1">{data.company.name}</div>
-				<div class="text-xl">
+			<div class="flex items-center flex-col sm:flex-row">
+				<div class="flex-1 w-full">
+					<div class="text-3xl font-bold">
+						{data.company.name}
+					</div>
+					<div>
+						{data.company.address}, {data.company.city}, {data.company.state}
+						{data.company.zip}
+					</div>
+				</div>
+				<div class="text-xl w-full mt-2 sm:w-auto sm:mt-0">
 					<Currency currency="USD" amount={data.company.annualSales} />
 				</div>
-			</div>
-			<div>
-				{data.company.address}, {data.company.city}, {data.company.state}
-				{data.company.zip}
 			</div>
 		</div>
 	</div>
