@@ -16,7 +16,7 @@
 			/>
 			<div class="text-lg font-bold text-blue-900 p-4">
 				<span class="group-hover:underline">List of Companies</span>
-				<div class="text-sm font-normal">Static Page</div>
+				<div class="text-sm font-normal">Static</div>
 			</div>
 		</a>
 
