@@ -7,7 +7,7 @@
 
 <a
 	href={`/companies/${company.id}`}
-	class="cursor-pointer border shadow-sm bg-white hover:bg-gray-50 group"
+	class="cursor-pointer shadow-sm bg-white hover:bg-gray-50 group"
 >
 	<img
 		src={`https://picsum.photos/seed/${company.id}/640/480`}
