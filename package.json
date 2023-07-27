@@ -1,5 +1,5 @@
 {
-	"name": "jtc-demo",
+	"name": "jtc-demo-sveltekit",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {

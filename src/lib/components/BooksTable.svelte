@@ -4,9 +4,9 @@
 	export let books: Array<Book>;
 </script>
 
-<div class="grid gap-8 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+<div class="grid gap-5 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
 	{#each books as book}
-		<div class="flex flex-row items-start justify-start gap-4 bg-white p-4">
+		<div class="flex flex-row items-start justify-start gap-4 bg-white p-4 shadow-sm">
 			{#if book.formats?.['image/jpeg']}
 				<img
 					src={book.formats['image/jpeg']}

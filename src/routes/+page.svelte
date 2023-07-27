@@ -2,11 +2,34 @@
 	import Container from '$lib/components/Container.svelte';
 </script>
 
+<svelte:head>
+	<title>JTC Demo - Sveltekit</title>
+</svelte:head>
+
 <Container>
-	<div class="text-lg font-bold mb-4 hover:underline text-blue-900">
-		<a href="/companies">Prerendered Static Page: Company Annual Sales Page</a>
-	</div>
-	<div class="text-lg font-bold hover:underline text-blue-900">
-		<a href="/companies">Dynamic Data: Project Gutenburg Books - Dynamic</a>
+	<div class="grid md:grid-cols-2 gap-5 lg:gap-10">
+		<a href="/companies" class="group bg-white inline-block hover:bg-gray-50 shadow-sm">
+			<img
+				src="https://picsum.photos/seed/company-annual/640/480"
+				alt="static page"
+				class="object-cover w-full h-48 md:h-auto"
+			/>
+			<div class="text-lg font-bold text-blue-900 p-4">
+				<span class="group-hover:underline">List of Companies</span>
+				<div class="text-sm font-normal">Static Page</div>
+			</div>
+		</a>
+
+		<a href="/books" class="group bg-white inline-block hover:bg-gray-50 shadow-sm">
+			<img
+				src="https://picsum.photos/seed/books/640/480"
+				alt="static page"
+				class="object-cover w-full h-48 md:h-auto"
+			/>
+			<div class="text-lg font-bold text-blue-900 p-4">
+				<span class="group-hover:underline">Project Gutenburg Books</span>
+				<div class="text-sm font-normal">Dyanmic</div>
+			</div>
+		</a>
 	</div>
 </Container>

@@ -10,6 +10,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Books</title>
+</svelte:head>
+
 <Container>
 	{#await booksPromise}
 		<h1>Loading...</h1>

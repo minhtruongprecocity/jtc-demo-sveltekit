@@ -6,6 +6,10 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>{data.company.name}</title>
+</svelte:head>
+
 <Container>
 	<a href="/companies" class="mb-4 py-2 block text-blue-950"
 		>&lt; <span class="hover:underline">Back</span></a
