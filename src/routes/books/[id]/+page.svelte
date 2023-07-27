@@ -21,7 +21,7 @@
 			&lt; <span class="hover:underline">Back</span>
 		</button>
 
-		<div class="flex flex-row gap-10">
+		<div class="flex flex-col items-center gap-10 sm:flex-row sm:items-start">
 			<img
 				src={book.formats['image/jpeg']}
 				alt={`${book.title} cover`}
