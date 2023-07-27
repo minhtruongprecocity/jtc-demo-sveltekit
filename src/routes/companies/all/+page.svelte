@@ -16,7 +16,7 @@
 <Container>
 	<div class="flex items-center mb-4 justify-end flex-row">
 		<h1 class="text-2xl font-bold mr-5 flex-1">All Companies</h1>
-		<a href="/companies" class="hover:underline mr-5 text-blue-950">View Top 10</a>
+		<a href="/companies" class="hover:underline mr-0 text-blue-950 sm:mr-5">View Top 10</a>
 		<Toggle
 			class="justify-end hidden sm:flex"
 			checked={viewAsList}
