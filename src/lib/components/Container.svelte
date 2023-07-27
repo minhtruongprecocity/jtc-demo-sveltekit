@@ -1,1 +1,1 @@
-<div class="container mx-auto p-5 {$$props.class}"><slot /></div>
+<div class="container mx-auto px-5 py-8 {$$props.class}"><slot /></div>

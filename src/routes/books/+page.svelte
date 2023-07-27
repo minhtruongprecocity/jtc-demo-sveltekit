@@ -16,7 +16,7 @@
 
 <Container>
 	{#await booksPromise}
-		<h1>Loading...</h1>
+		<h1 class="text-lg">Loading...</h1>
 	{:then books}
 		<div class="flex flex-row gap-4 justify-end">
 			<button
