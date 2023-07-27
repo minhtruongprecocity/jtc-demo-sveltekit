@@ -6,7 +6,10 @@
 
 <div class="grid gap-5 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
 	{#each books as book}
-		<div class="flex flex-row items-start justify-start gap-4 bg-white p-4 shadow-sm">
+		<a
+			href={`/books/${book.id}`}
+			class="flex flex-row items-start justify-start gap-4 bg-white p-4 shadow-sm hover:bg-gray-50"
+		>
 			{#if book.formats?.['image/jpeg']}
 				<img
 					src={book.formats['image/jpeg']}
@@ -18,6 +21,6 @@
 				<div class="text-sm text-gray-500">{book.authors?.[0]?.name}</div>
 				<div class="text-md font-bold lg:text-lg sm:text-md">{book.title}</div>
 			</div>
-		</div>
+		</a>
 	{/each}
 </div>
