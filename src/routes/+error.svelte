@@ -4,5 +4,6 @@
 </script>
 
 <Container>
-	<h1 class="text-xl">{$page.error?.message}</h1>
+	<h1 class="text-3xl mb-4">{$page.status}</h1>
+	<h2 class="text-xl">{$page.error?.message}</h2>
 </Container>
