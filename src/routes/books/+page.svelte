@@ -2,6 +2,7 @@
 	import { getBooks, getBooksWithUrl } from '$lib/api/books';
 	import BooksTable from '$lib/components/BooksTable.svelte';
 	import Container from '$lib/components/Container.svelte';
+	import Pagination from '$lib/components/Pagination.svelte';
 
 	let booksPromise = getBooks();
 
@@ -18,31 +19,9 @@
 	{#await booksPromise}
 		<h1 class="text-lg">Loading...</h1>
 	{:then books}
-		<div class="flex flex-row gap-4 justify-end">
-			<button
-				on:click={() => changePage(books.previous)}
-				class="p-4 hover:underline disabled:opacity-50 disabled:hover:no-underline"
-				disabled={!books.previous}>Prev</button
-			>
-			<button
-				on:click={() => changePage(books.next)}
-				class="p-4 hover:underline"
-				disabled={!books.next}>Next</button
-			>
-		</div>
+		<Pagination prevUrl={books.previous} nextUrl={books.next} {changePage} />
 		<BooksTable books={books.results} />
-		<div class="flex flex-row gap-4 justify-end">
-			<button
-				on:click={() => changePage(books.previous)}
-				class="p-4 hover:underline disabled:opacity-50 disabled:hover:no-underline"
-				disabled={!books.previous}>Prev</button
-			>
-			<button
-				on:click={() => changePage(books.next)}
-				class="p-4 hover:underline"
-				disabled={!books.next}>Next</button
-			>
-		</div>
+		<Pagination prevUrl={books.previous} nextUrl={books.next} {changePage} />
 	{:catch error}
 		<h1>Error</h1>
 	{/await}
