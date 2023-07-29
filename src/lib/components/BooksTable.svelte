@@ -4,7 +4,7 @@
 	export let books: Array<Book>;
 </script>
 
-<div class="grid gap-5 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+<div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
 	{#each books as book}
 		<a
 			href={`/books/${book.id}`}
@@ -14,12 +14,12 @@
 				<img
 					src={book.formats['image/jpeg']}
 					alt={`${book.title} cover`}
-					class="w-36 max-h-48 object-contain"
+					class="max-h-48 w-36 object-contain"
 				/>
 			{/if}
 			<div class="flex-1">
 				<div class="text-sm text-gray-500">{book.authors?.[0]?.name}</div>
-				<div class="text-md font-bold lg:text-lg sm:text-md">{book.title}</div>
+				<div class="text-md sm:text-md font-bold lg:text-lg">{book.title}</div>
 			</div>
 		</a>
 	{/each}

@@ -7,7 +7,7 @@
 
 <div class="flex items-center bg-teal-200">
 	<Container class="flex flex-row items-center gap-4 text-blue-950 sm:gap-10">
-		<a href="/" class="text-2xl font-bold flex-1">
+		<a href="/" class="flex-1 text-2xl font-bold">
 			JTC Demo
 			<div class="text-sm font-normal">Sveltekit</div>
 		</a>

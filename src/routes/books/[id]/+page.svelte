@@ -17,7 +17,7 @@
 	{#await bookPromise}
 		<h1 class="text-lg">Loading...</h1>
 	{:then book}
-		<button class="mb-4 py-2 block text-blue-950" on:click={() => history.back()}>
+		<button class="mb-4 block py-2 text-blue-950" on:click={() => history.back()}>
 			&lt; <span class="hover:underline">Back</span>
 		</button>
 
@@ -25,7 +25,7 @@
 			<img
 				src={book.formats['image/jpeg']}
 				alt={`${book.title} cover`}
-				class="max-h-72 w-48 object-contain mb-5"
+				class="mb-5 max-h-72 w-48 object-contain"
 			/>
 			<div class="flex-1">
 				<div class="mb-5">

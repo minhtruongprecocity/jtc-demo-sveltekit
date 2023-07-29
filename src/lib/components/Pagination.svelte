@@ -4,7 +4,7 @@
 	export let changePage: (ur: string) => void;
 </script>
 
-<div class="flex flex-row gap-4 justify-end">
+<div class="flex flex-row justify-end gap-4">
 	<button
 		on:click={() => changePage(prevUrl)}
 		class="p-4 hover:underline disabled:opacity-50 disabled:hover:no-underline"

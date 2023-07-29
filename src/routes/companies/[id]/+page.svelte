@@ -11,14 +11,14 @@
 </svelte:head>
 
 <Container>
-	<button class="mb-4 py-2 block text-blue-950" on:click={() => history.back()}>
+	<button class="mb-4 block py-2 text-blue-950" on:click={() => history.back()}>
 		&lt; <span class="hover:underline">Back</span>
 	</button>
 
 	<div class="flex gap-4">
 		<div class="w-full">
-			<div class="flex items-center flex-col sm:flex-row">
-				<div class="flex-1 w-full">
+			<div class="flex flex-col items-center sm:flex-row">
+				<div class="w-full flex-1">
 					<div class="text-2xl font-bold">
 						{data.company.name}
 					</div>
@@ -27,7 +27,7 @@
 						{data.company.zip}
 					</div>
 				</div>
-				<div class="text-xl w-full mt-2 sm:w-auto sm:mt-0">
+				<div class="mt-2 w-full text-xl sm:mt-0 sm:w-auto">
 					<Currency currency="USD" amount={data.company.annualSales} />
 				</div>
 			</div>
@@ -36,15 +36,15 @@
 
 	<hr class="my-8" />
 
-	<div class="leading-7 mb-8">{data.company.description}</div>
+	<div class="mb-8 leading-7">{data.company.description}</div>
 
 	<hr class="my-8" />
 
-	<div class="flex gap-4 items-center">
+	<div class="flex items-center gap-4">
 		<img
 			src={`https://robohash.org/${data.company.id}.png?size=100x100`}
 			alt={data.company.contact}
-			class="rounded-full shadow-sm bg-blue-900"
+			class="rounded-full bg-blue-900 shadow-sm"
 		/>
 		<div class="mb-4">
 			<div class="text-lg font-bold">

@@ -14,11 +14,11 @@
 </svelte:head>
 
 <Container>
-	<div class="flex items-center mb-4 justify-end flex-row">
-		<h1 class="text-2xl font-bold flex-1">Top 10</h1>
-		<a href="/companies/all" class="hover:underline mr-0 text-blue-950 sm:mr-5">View All</a>
+	<div class="mb-4 flex flex-row items-center justify-end">
+		<h1 class="flex-1 text-2xl font-bold">Top 10</h1>
+		<a href="/companies/all" class="mr-0 text-blue-950 hover:underline sm:mr-5">View All</a>
 		<Toggle
-			class="justify-end hidden sm:flex"
+			class="hidden justify-end sm:flex"
 			checked={viewAsList}
 			offLabel="Grid"
 			onLabel="List"
@@ -27,13 +27,13 @@
 	</div>
 
 	{#if !viewAsList}
-		<div class="grid gap-5 md:grid-cols-3 sm:grid-cols-2">
+		<div class="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
 			{#each data.companies as company, i}
 				<CompanyGrid {company} />
 			{/each}
 		</div>
 	{:else if viewAsList}
-		<div class="grid gap-5 grid-cols-1">
+		<div class="grid grid-cols-1 gap-5">
 			{#each data.companies as company, i}
 				<CompanyList {company} />
 			{/each}

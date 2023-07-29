@@ -10,16 +10,16 @@
 </svelte:head>
 
 <Container>
-	<div class="grid md:grid-cols-2 gap-5 lg:gap-10">
+	<div class="grid gap-5 md:grid-cols-2 lg:gap-10">
 		{#each data.links as link}
-			<a href={link.attributes.url} class="group bg-white inline-block hover:bg-gray-50 shadow-sm">
+			<a href={link.attributes.url} class="group inline-block bg-white shadow-sm hover:bg-gray-50">
 				<img
 					src={link.attributes.image_url}
 					alt="static page"
-					class="object-cover w-full h-48 md:h-auto"
+					class="h-48 w-full object-cover md:h-auto"
 				/>
-				<div class="text-lg font-bold p-4">
-					<span class="group-hover:underline text-blue-950">{link.attributes.title}</span>
+				<div class="p-4 text-lg font-bold">
+					<span class="text-blue-950 group-hover:underline">{link.attributes.title}</span>
 					<div class="text-sm font-normal">{link.attributes.description}</div>
 				</div>
 			</a>
